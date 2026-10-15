@@ -213,7 +213,7 @@ jobs:
     - name: Flet Build APK
       run: |
         flutter config --no-analytics
-        echo "y" | flutter doctor --android-licenses || true
+        yes | flutter doctor --android-licenses || true
         echo y | flet build apk --verbose
 
     - name: Upload APK Artifact
